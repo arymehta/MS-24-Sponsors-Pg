@@ -1,20 +1,15 @@
-@font-face {
-    font-family: 'Azonix';
-    src: url('./Azonix.otf') format('opentype');
-}
-
-:root{
-    --cardWidth : 350px;
-    --cardHeight: 550px;
-    --cardFrontColor : linear-gradient(#133afc,#342cad,#a319ff);
+:root {
+    --cardWidth: 300px;
+    --cardHeight: 500px;
+    --cardFrontColor: linear-gradient(#133afc, #342cad, #a319ff);
     --cardBackColor: #1e90ff;
     --cardHoverEffectTime: 0.5s;
     --headerColor: rgb(65, 255, 255);
     --headerSize: 8vh;
-    --fadeInDelay : 1.5s;
+    --fadeInDelay: 1.5s;
 }
 
-*{
+* {
     border: 0;
     margin: 0;
     padding: 0;
@@ -22,26 +17,24 @@
 }
 
 
-.logo-container{
+.logo-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin-top: 10px;
 }
 
-.logo-container img{
-    height: 200px;
+.logo-container img {
+    height: 250px;
     width: fit-content;
 }
 
-h1{
-    margin-bottom: 100px;
-    color: var(--headerColor);
-    text-align: center;
-    font-size: var(--headerSize);
+#favicon {
+    height: 175px;
 }
 
-body{
+body {
     color: white;
     /* background: url(./2314-157183704.gif); */
     background-color: black;
@@ -50,37 +43,37 @@ body{
     background-size: cover;
 }
 
-img{
+img {
     width: 90%;
     /* height: 100%; */
-    transition:  all var(--fadeInDelay);
+    transition: all var(--fadeInDelay);
     background-color: transparent;
 }
 
 /* Styles for Fade in motion of */
-.hidden{
-    opacity : 0;
-    transition : all var(--fadeInDelay); 
+.hidden {
+    opacity: 0;
+    transition: all var(--fadeInDelay);
 }
 
-.show{
-    opacity : 1;
+.show {
+    opacity: 1;
 }
 
 /* Styles for Sponsors Card */
-.card{
+.card {
     height: var(--cardHeight);
     width: var(--cardWidth);
 }
 
-.card-inner{
+.card-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 
     background-image: var(--cardFrontColor);
-    
+
     border-radius: 50px;
 
     height: 100%;
@@ -91,11 +84,11 @@ img{
 
 }
 
-.card-inner:hover{
+.card-inner:hover {
     scale: 1.05;
 }
 
-.card-front{
+.card-front {
     margin-top: 10%;
     width: 100%;
     height: 100%;
@@ -107,15 +100,15 @@ img{
     overflow: hidden;
 }
 
-.card-front img{
+.card-front img {
     width: 90%;
 }
 
-.card-front:hover{
-    scale: 1.05;
+.card-front:hover {
+    scale: 1.04;
 }
 
-.card-back{
+.card-back {
     width: 100%;
     height: 13%;
     background: black;
@@ -123,29 +116,29 @@ img{
     padding: 10px;
     border-top-left-radius: 150%;
     border-top-right-radius: 150%;
-    border-bottom-left-radius: 50px ;
-    border-bottom-right-radius: 50px ;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 
     text-align: center;
     overflow-y: hidden;
     transition: all var(--cardHoverEffectTime) ease;
 }
 
-.card-back img{
+.card-back img {
     width: 50px;
     margin-top: 5px;
 }
 
-.card-inner:hover .card-back{
+.card-inner:hover .card-back {
     height: 60%;
     overflow-y: visible;
 }
 
-.card-inner:hover .card-back img{
+.card-inner:hover .card-back img {
     display: none;
 }
 
-.card-info{
+.card-info {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -153,7 +146,7 @@ img{
     margin-top: 1%;
 }
 
-svg{
+svg {
     margin-top: 5px;
     fill: white;
     width: 8.5%;
@@ -161,7 +154,7 @@ svg{
 
 
 /* Each Row of Sponsors */
-.sponsor-row{
+.sponsor-row {
     display: flex;
     justify-content: center;
     column-gap: 10vw;
@@ -179,73 +172,73 @@ svg{
     --gradient-color-2: #010363;
     --gradient-color-3: #350242;
     --gradient-color-4: #000000;
-  }
+}
 
 
 /* Glowing Text */
 .event-name {
-user-select: none;
-cursor: none;
-color: white;
-text-align: center;
-align-items: center;
-/* justify-content: center;
+    user-select: none;
+    cursor: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    /* justify-content: center;
 font-family: "Do Hyeon", sans-serif; */
-font-family: 'Geologica', sans-serif;
-font-weight: 400;
-font-style: normal;
-font-weight: 400;
-font-style: normal;
-top: 50%;
-position: static;
-font-size: 100px;
-text-shadow: 0px 0px 10px cyan,
-    0px 0px 40px cyan,
-    0px 0px 80px rgb(63, 1, 99),
-    0px 0px 120px cyan,
-    0px 0px 200px cyan;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 100px;
+    font-size: var(--headerSize);
+    top: 50%;
+    position: static;
+    text-shadow: 0px 0px 10px cyan,
+        0px 0px 40px cyan,
+        0px 0px 80px rgb(63, 1, 99),
+        0px 0px 120px cyan,
+        0px 0px 200px cyan;
 }
 
 
-  /* Media queries for responsiveness */
+/* Media queries for responsiveness */
 @media screen and (max-width: 1200px) {
-    #main-logo{
+
+    #main-logo {
         display: none;
     }
 
-    #favicon{
-        height: 250px;
+    #favicon {
+        height: 200px;
     }
 
-    .card{
+    .card {
         height: 500px;
         width: 350px;
         margin-bottom: 10vh;
     }
 
-    .event-name{
-        font-size: 80px;
+    .event-name {
+        font-size: 60px;
     }
 }
 
-.scroll-up a{
+.scroll-up a {
     text-decoration: none;
     color: white;
 }
 
-.scroll-up{
-    font-size: 3rem;
+.scroll-up {
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* transform: rotate(-90deg) ; */
-    transition: all 0.5s;
-    font-weight: bolder;
-    margin: 8px auto;
+    transition: all var(--cardHoverEffectTime);
+    margin: 15px;
 }
 
 
-.card-inner:hover .card-back .scroll-up{
-    transform: rotate(180deg) ;
+.card-inner:hover .card-back .scroll-up {
+    transform: rotate(180deg);
 
 }
