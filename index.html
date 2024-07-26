@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Sponsors</title>
+
+      <!-- Styles -->
+      <link rel = 'stylesheet' href="sponsors-styles.css">
+
+      
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+      <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+      <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+         
+      <!-- Fade animation JS -->
+      <script defer src = 'scripts/sponsors-script.js'></script>
+
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        const temporary = {
+            title: "Sponsor Title",
+            description: "Description of Sponsor",
+            sponsorImageSrc: "./assets/images/TATAPOWER.NS_BIG.png",
+            name:  "Name of Sponsor"
+        };
+    
+        function createSponsorCard(sponsor) {
+            document.write(`
+                <div class="card">
+                <div class="card-inner hidden">
+                <div class="card-front hidden">
+                    <img src="${sponsor.sponsorImageSrc}" alt = "${sponsor.title} Sponsor">  
+                    <h2>${sponsor.title}</h2>
+                </div>
+                
+                <div class="card-back hidden">
+                  <div class = 'scroll-up'>
+<i class="fa fa-solid fa-chevron-up"></i>
+                     </div>
+                     <div class = 'card-info'> 
+                        <h3>${sponsor.name}</h3>
+                        <p class="description">${sponsor.description}</p>
+                     </div> 
+                </div>
+                </div> 
+                </div>
+                `);
+            }
+    </script>
+
+    <script src="./scripts/gradient2.js"></script>
+    </head>
+
+   <body class = 'bg'>
+      <!-- HTML for previous gradient.js background -->
+      <canvas
+        id="gradient-canvas"
+
+      ></canvas>
+   
+      <!-- <script src="scripts/particle.js"></script> -->
+      
+      <div class = 'logo-container'>
+         <img id = 'favicon' src = 'assets/images/favicon.svg'>
+         <img id = 'main-logo' src = 'assets/images/MS24Logo.png'>
+      </div>
+
+      <h1 class = 'event-name'>Meet Our Sponsors</h1>
+      
+      <div class="sponsor-row">
+         <script>
+            createSponsorCard(temporary);
+            
+            createSponsorCard(temporary);
+            
+            createSponsorCard(temporary);
+         </script>
+      </div>
+   
+      <div class="sponsor-row">
+         <script>
+            createSponsorCard(temporary);
+
+            createSponsorCard(temporary);
+         </script>
+      </div>
+
+      <div class="sponsor-row">
+        <script>
+           createSponsorCard(temporary);
+           
+           createSponsorCard(temporary);
+           
+           createSponsorCard(temporary);
+        </script>
+     </div>
+
+     <div class="sponsor-row">
+        <script>
+           createSponsorCard(temporary);
+           
+        </script>
+     </div>
+
+     <script src="scripts/gradient.js"></script>
+   </body>
+</html>
