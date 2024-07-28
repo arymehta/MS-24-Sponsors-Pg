@@ -78,7 +78,7 @@ img {
 
     height: 100%;
     width: 100%;
-
+    overflow: hidden;
     transition: all var(--cardHoverEffectTime);
     /* padding: 10px; */
 
@@ -191,7 +191,7 @@ font-family: "Do Hyeon", sans-serif; */
     font-style: normal;
     margin-bottom: 100px;
     font-size: var(--headerSize);
-    top: 50%;
+    /* top: 50%; */
     position: static;
     text-shadow: 0px 0px 10px cyan,
         0px 0px 40px cyan,
@@ -213,8 +213,8 @@ font-family: "Do Hyeon", sans-serif; */
     }
 
     .card {
-        height: 500px;
-        width: 350px;
+        height: 450px;
+        width: 300px;
         margin-bottom: 10vh;
     }
 
@@ -240,5 +240,10 @@ font-family: "Do Hyeon", sans-serif; */
 
 .card-inner:hover .card-back .scroll-up {
     transform: rotate(180deg);
+}
 
+#vanta-canvas{
+    height: 100%;
+    margin-bottom: -20vh;
+    margin-top: -10px;
 }

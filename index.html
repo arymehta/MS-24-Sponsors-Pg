@@ -22,6 +22,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <!-- Background  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <!-- JS for generating cards -->
     <script>
 
@@ -56,21 +60,14 @@
             }
     </script>
 
-    <!-- Background -->
-    <script src="./scripts/gradient2.js"></script>
-
   </head>
   
   <body class = 'bg'>
-    <!-- HTML for previous gradient.js background -->
-    <canvas
-      id="gradient-canvas"
-   >
-   </canvas>
+    <div id = 'vanta-canvas'>
     
     <div class = 'logo-container'>
-      <img id = 'favicon' src = 'assets/images/favicon.svg'>
-      <img id = 'main-logo' src = 'assets/images/MS24Logo.png'>
+      <img id = 'favicon' src = 'assets/images/favicon.ico'>
+      <img id = 'main-logo' src = 'assets/images/header-logo.png'>
     </div>
     
     <h1 class = 'event-name'>Meet Our Sponsors</h1>
@@ -108,6 +105,41 @@
         createSponsorCard(temporary);
       </script>
     </div>
+
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+
+<script>
+
+VANTA.WAVES({
+  el: "#vanta-canvas",
+  mouseControls: false,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x000018,
+  shininess: 17.00,
+  waveHeight: 9.50,
+  zoom: 1.02
+})
+let lastUpdate = 0;
+const fpsLimit = 30;
+
+function updateAnimation(timestamp) {
+  if (timestamp - lastUpdate > 1000 / fpsLimit) {
+    lastUpdate = timestamp;
+    vantaEffect.update(); // Trigger update if applicable
+  }
+  requestAnimationFrame(updateAnimation);
+}
+
+requestAnimationFrame(updateAnimation);
+
+  </script>
 
   </body>
 </html>
