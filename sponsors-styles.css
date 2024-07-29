@@ -30,10 +30,6 @@
     width: fit-content;
 }
 
-#favicon {
-    height: 175px;
-}
-
 body {
     color: white;
     /* background: url(./2314-157183704.gif); */
@@ -205,7 +201,7 @@ font-family: "Do Hyeon", sans-serif; */
 @media screen and (max-width: 1200px) {
 
     #main-logo {
-        display: none;
+        height: 125px;
     }
 
     #favicon {
