@@ -237,9 +237,12 @@ font-family: "Do Hyeon", sans-serif; */
 }
 
 #vanta-canvas{
-    height: 100%;
-    margin-bottom: -20vh;
-    margin-top: -10px;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .navbar-container {
