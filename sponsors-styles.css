@@ -355,6 +355,11 @@ font-family: "Do Hyeon", sans-serif; */
 }
 
 @media (max-width: 1200px) {
+
+    .logo img {
+        height: 50px;
+        display:block;
+    }
     .nav-links {
         position: fixed;
         right: 0;
@@ -409,12 +414,23 @@ font-family: "Do Hyeon", sans-serif; */
   .nav-links::-webkit-scrollbar-thumb {
     background-color: rgba(79, 77, 77, 0.8); 
   }
+  .home-direct{
+    display: none;
+}
 }
 
 @media (min-width: 1200px) {
     .navbar-container {
         display: none;
     }
+}
 
-    
+.home-direct{
+    position: absolute;
+    left:10px;
+    top: 10px;
+}
+
+.home-direct img{
+    height: 50px;
 }
