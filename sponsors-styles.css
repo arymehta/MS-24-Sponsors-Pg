@@ -247,190 +247,212 @@ font-family: "Do Hyeon", sans-serif; */
     z-index: -1;
 }
 
-/* Navbar */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-
-.navbar-container {  
-    font-family: 'Nunito';
-    display: block;
-    z-index: 10000;
+body {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  overflow-x: hidden;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    padding: 10px 20px;
-    font-size: 20px;
+body.no-scroll {
+  overflow: hidden;
 }
 
-.logo img {
-    height: 50px;
+#vanta-canvas {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.nav-links {
-    display: flex;
-    gap: 5px;
+/* Navbar styles */
+
+.checkbox {
+  display: none;
 }
 
-.nav-item {
-    color: white;
-    text-decoration: none;
-    text-align: center;
+.navbar-icon{
+  height: 3rem;
+  width: 3rem;
+  z-index: 999;
+  display: inline-block;
 }
 
-.nav-item::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1.5px;
-    background: white;
-    transition: width 0.6s;
+.msLink{
+  position: absolute;
+  top: 3vh;
+  left: 5vw;
+  z-index: 10000;
 }
 
-.nav-item:hover::after {
-    width: 100%;
+.button {
+  position: relative;
+  background-color: rgba(59, 59, 59, 0.571);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 3vh;
+  right: 5vw;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem black;
+  text-align: center;
+  cursor: pointer;
+}
+.nav-elements {
+  display: none;
 }
 
-.dropdown {
-    overflow: hidden;
+.background {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background-color: rgba(52, 52, 52, 0.229);
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  pointer-events: none;
 }
 
-.dropdown .dropbtn {
-    font-size: 20px;  
-    border: none;
-    color: white;
-    background-color: inherit;
-    font-family: myFont;
+.nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -60vw;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.4s;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: transparent;
-    min-width: 120px;
-    z-index: 1;
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
 }
 
-.dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
+.item {
+  margin: 8px;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+.link {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 5px 3px;
+  color: white;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  background-size: 220%;
+  transition: all 0.3s;
+  position: relative;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  left: 0;
+  background: white;
+  transition: width 0.3s ease, left 0.3s ease;
+  -webkit-transition: width 0.3s ease, left 0.3s ease;
 }
 
-.dropdown:hover .dropbtn {
-    background-color: #ddd;
-    color: black;
+.link:hover::after {
+  width: 100%;
+  left: 0;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+.link:not(:hover)::after {
+  width: 0;
+  left: 0;
 }
 
-.hamburger .bar {
-    width: 18px;
-    height: 3px;
-    background-color: white;
+.checkbox:checked ~ .background {
+  transform: translateX(0);
+}
+.checkbox:checked ~ .nav {
+  opacity: 1;
+  width: 100%;
+  right: 0;
 }
 
-.hamburger .bar1 {
-    width: 25px;
-    height: 3px;
-    background-color: white;
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media (max-width: 1200px) {
+.icon,
+.icon::before,
+.icon::after {
+  width: 1.2rem;
+  height: 2px;
+  background-color: white;
+  display: inline-block;
+}
 
-    .logo img {
-        height: 50px;
-        display:block;
-    }
-    .nav-links {
-        position: fixed;
-        right: 0;
-        top: 0;
-        height: auto;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 80px;
-        transform: translateX(100%);
-        transition: transform 0.5s;
-    }
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
 
-    .nav-links.open {
-        transform: translateX(0);
-        right: 20%;
-    }
+.icon::before {
+  top: -0.5rem;
+}
+.icon::after {
+  top: 0.5rem;
+}
 
-    .nav-item {
-        margin: 10px;
-    }
+.button:hover icon:before {
+  top: -0.8rem;
+}
+.button:hover icon::after {
+  top: 0.8rem;
+}
 
-    .hamburger {
-        display: flex;
-    }
+.checkbox:checked + .button .icon {
+  background-color: transparent;
+}
 
-    .nav-links {
-      position: fixed;
-      right:0;
-      top: 0;
-      height: 60vh;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      width: 60%;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 80px;
-      transform: translateX(100%);
-      transition: transform 0.5s;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 8px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(5.7px);
-      -webkit-backdrop-filter: blur(5.7px);
-      border: 1px solid rgba(255, 255, 255, 0.72);
+.checkbox:checked + .button .icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.checkbox:checked + .button .icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.checkbox:checked body {
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 680px) {
+  .nav-elements {
+    display: flex !important;
   }
-
-  .nav-links::-webkit-scrollbar {
-    width:12px  
 }
 
-  .nav-links::-webkit-scrollbar-thumb {
-    background-color: rgba(79, 77, 77, 0.8); 
-  }
-  .home-direct{
-    display: none;
-}
-}
-
-@media (min-width: 1200px) {
-    .navbar-container {
-        display: none;
-    }
-}
-
-.home-direct{
-    position: absolute;
-    left:10px;
-    top: 10px;
-}
-
-.home-direct img{
-    height: 50px;
-}
+/* Navbar styles end here */

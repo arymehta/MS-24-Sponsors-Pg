@@ -1,9 +1,8 @@
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.getElementById('navLinks');
-    const hamburger = document.getElementById('hamburger');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
+// JavaScript to prevent body scrolling when navbar is open
+document.getElementById('navi-toggle').addEventListener('change', function () {
+if (this.checked) {
+    document.body.classList.add('no-scroll');
+} else {
+    document.body.classList.remove('no-scroll');
+}
 });
