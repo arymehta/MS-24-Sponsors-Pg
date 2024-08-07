@@ -453,6 +453,21 @@ body.no-scroll {
   .nav-elements {
     display: flex !important;
   }
+
+  .home-direct
+  {
+    display:none;
+  }
 }
 
 /* Navbar styles end here */
+
+.home-direct{
+  position: absolute;
+  left:10px;
+  top: 10px;
+}
+
+.home-direct img{
+  height: 50px;
+}
