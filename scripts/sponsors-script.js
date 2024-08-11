@@ -12,6 +12,6 @@ const observer = new IntersectionObserver((entries) =>{
 });
 
 
-// control fade-in animation
+// control events showing
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((e1) => observer.observe(e1));
