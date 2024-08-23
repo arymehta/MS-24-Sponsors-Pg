@@ -127,18 +127,12 @@ img {
     transition: all var(--cardHoverEffectTime) ease;
 }
 
-.card-back img {
-    width: 50px;
-    margin-top: 5px;
+.card-back.creep-up .scroll-up{
+  transform: rotate(180deg);
 }
-
-.card-inner:hover .card-back {
-    height: 60%;
-    overflow-y: visible;
-}
-
-.card-inner:hover .card-back img {
-    display: none;
+.creep-up {
+  height: 60%;
+  overflow-y: visible;
 }
 
 .card-info {
@@ -218,7 +212,7 @@ font-family: "Do Hyeon", sans-serif; */
     }
 
     .event-name {
-        font-size: 40px;
+        font-size: 20;
     }
 }
 
