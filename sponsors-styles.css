@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@font-face {
+  font-family: 'Azonix';
+  src: url('/assets/fonts/Azonix.otf') format('opentype');
+}
 
 :root {
-    --cardWidth: 300px;
-    --cardHeight: 500px;
-    --cardFrontColor: linear-gradient(#133afc, #342cad, #a319ff);
+    --cardWidth: 350px;
+    --cardHeight: 550px;
+    --cardFrontColor: linear-gradient(rgba(19, 58, 252, 0.5), rgba(53, 44, 173, 0.5), rgba(163, 25, 255,0.75));
+    /* --cardFrontColor: rgba(0, 0, 0, 0.7); */
     --cardBackColor: #1e90ff;
     --cardHoverEffectTime: 0.5s;
     --headerColor: rgb(65, 255, 255);
     --headerSize: 8vh;
     --fadeInDelay: 1.5s;
 }
-@font-face {
-    font-family: myFont;
-    src: url(TheRiftShop-Yzde4.ttf);  
-}
-
 * {
     border: 0;
     margin: 0;
@@ -31,7 +31,7 @@
 }
 
 .logo-container img {
-    height: 200px;
+    height: 20vh;
     width: fit-content;
 }
 
@@ -63,6 +63,7 @@ img {
 .card {
     height: var(--cardHeight);
     width: var(--cardWidth);
+    
 }
 
 .card-inner {
@@ -79,7 +80,10 @@ img {
     width: 100%;
     overflow: hidden;
     transition: all var(--cardHoverEffectTime);
-    /* padding: 10px; */
+
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+   /* box-shadow: 0 0 80px rgba(0, 0, 0, 0.3); */
 
 }
 
@@ -101,7 +105,7 @@ img {
 }
 
 .card-front img {
-    width: 90%;
+    width: 80%;
 }
 
 .card-front:hover {
@@ -110,9 +114,8 @@ img {
 
 .card-back {
     width: 100%;
-    height: 13%;
-    background: black;
-    opacity: 0.90;
+    height: 12%;
+    background: rgba(0, 0, 0, 0.8);
     padding: 10px;
     border-top-left-radius: 150%;
     border-top-right-radius: 150%;
@@ -184,12 +187,10 @@ svg {
     align-items: center;
     /* justify-content: center;
 font-family: "Do Hyeon", sans-serif; */
-    font-family: 'Geologica', sans-serif;
+    font-family: 'Azonix', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 100px;
+    margin-bottom: 75px;
     font-size: var(--headerSize);
     /* top: 50%; */
     position: static;
@@ -198,6 +199,7 @@ font-family: "Do Hyeon", sans-serif; */
         0px 0px 80px rgb(63, 1, 99),
         0px 0px 120px cyan,
         0px 0px 200px cyan;
+    font-size: 3vw;
 }
 
 
@@ -205,7 +207,8 @@ font-family: "Do Hyeon", sans-serif; */
 @media screen and (max-width: 1200px) {
 
     #main-logo {
-        height: 150px;
+        margin-top: 40px;
+        height: 20vh;
     }
 
     .card {
@@ -215,7 +218,7 @@ font-family: "Do Hyeon", sans-serif; */
     }
 
     .event-name {
-        font-size: 60px;
+        font-size: 40px;
     }
 }
 
@@ -231,11 +234,6 @@ font-family: "Do Hyeon", sans-serif; */
     align-items: center;
     transition: all var(--cardHoverEffectTime);
     margin: 15px;
-}
-
-
-.card-inner:hover .card-back .scroll-up {
-    transform: rotate(180deg);
 }
 
 #vanta-canvas{
