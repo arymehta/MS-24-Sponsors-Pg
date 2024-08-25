@@ -157,13 +157,13 @@ img {
   transition: all var(--cardHoverEffectTime) ease;
 }
 
-.card-inner:hover .card-back {
-  height: 60%;
-  overflow-y: visible;
+.card-back.creep-up .scroll-up{
+  transform: rotate(180deg);
 }
 
-.card-inner:hover .card-back .scroll-up {
-  transform: rotate(180deg);
+.creep-up {
+  height: 60%;
+  overflow-y: visible;
 }
 
 .card-info {

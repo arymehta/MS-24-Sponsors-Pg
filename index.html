@@ -187,6 +187,17 @@ function updateAnimation(timestamp) {
   requestAnimationFrame(updateAnimation);
 
   </script>
+  <script>
+    // Select all the cards
+    const cards = document.querySelectorAll('.card-back');
 
+    // Add click event listener to each card
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('creep-up');
+
+        });
+    });
+  </script>
   </body>
 </html>
