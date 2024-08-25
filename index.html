@@ -13,9 +13,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Fade animation JS -->
     <script defer src = './scripts/sponsors-script.js'></script>
 
@@ -42,23 +40,31 @@
       function createSponsorCard(sponsor) {
             document.write(`
                <div class="card">
-               <div class="card-inner hidden">
-               <div class="card-front hidden">
-                  <img src="${sponsor.sponsorImageSrc}" alt = "${sponsor.title} Sponsor">  
-                  <h2>${sponsor.title}</h2>
-               </div>
-               
-               <div class="card-back hidden">
-                  <div class = 'scroll-up'>
-                     <i class="fa fa-solid fa-chevron-up"></i>
-                     </div>
-                     <div class = 'card-info'> 
-                        <h3>${sponsor.name}</h3>
+                  
+                  <div class = "circles">
+                    <div class="circle-1"></div>
+                    <div class="circle-2"></div>
+                    <div class="circle-3"></div>
+                  </div> 
+
+                  <div class="card-inner"> 
+                    <div class="card-front">       
+                        <img src="${sponsor.sponsorImageSrc}" alt = "${sponsor.title} Sponsor">  
+                        
+                    </div>
+                    <h2 class = "sponsor-title">${sponsor.title}</h2>
+                    <div class="card-back">
+                      <div class = 'scroll-up'>
+                        <i class="fa fa-solid fa-chevron-up"></i>
+                      </div>
+                      
+                      <div class = 'card-info'> 
+                        <h3 class = "sponsor-name">${sponsor.name}</h3>
                         <p class="description">${sponsor.description}</p>
-                     </div> 
-               </div>
-               </div> 
-               </div>
+                      </div> 
+                    </div>
+                  </div> 
+                </div>
                `);
             }
     </script>
@@ -162,7 +168,7 @@ VANTA.WAVES({
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
-  color: 0x040761,
+  color: 0x04104d,
   shininess: 17.00,
   waveHeight: 9.50,
   zoom: 0.5

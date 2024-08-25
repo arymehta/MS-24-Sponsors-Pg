@@ -1,259 +1,260 @@
-
 @font-face {
-  font-family: 'Azonix';
-  src: url('/assets/fonts/Azonix.otf') format('opentype');
+  font-family: "Azonix";
+  src: url("/assets/fonts/Azonix.otf") format("opentype");
 }
 
 :root {
-    --cardWidth: 350px;
-    --cardHeight: 550px;
-    --cardFrontColor: linear-gradient(rgba(19, 58, 252, 0.5), rgba(53, 44, 173, 0.5), rgba(163, 25, 255,0.75));
-    /* --cardFrontColor: rgba(0, 0, 0, 0.7); */
-    --cardBackColor: #1e90ff;
-    --cardHoverEffectTime: 0.5s;
-    --headerColor: rgb(65, 255, 255);
-    --headerSize: 8vh;
-    --fadeInDelay: 1.5s;
+  --cardWidth: 300px;
+  --cardHeight: 456px;
+  --cardFrontColor: rgba(36, 30, 30, 0.2);
+  --cardHoverEffectTime: 0.5s;
+  --headerColor: rgb(65, 255, 255);
+  --headerSize: 8vh;
+  --fadeInDelay: 1.5s;
 }
 * {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
-
 .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .logo-container img {
-    height: 20vh;
-    width: fit-content;
+  height: 20vh;
+  width: fit-content;
 }
 
 body {
-    color: white;
-    background-color: black;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-img {
-    width: 90%;
-    transition: all var(--fadeInDelay);
-    background-color: transparent;
-}
-
-/* Styles for Fade in motion of */
-.hidden {
-    opacity: 0;
-    transition: all var(--fadeInDelay);
-}
-
-.show {
-    opacity: 1;
-}
-
-/* Styles for Sponsors Card */
-.card {
-    height: var(--cardHeight);
-    width: var(--cardWidth);
-    
-}
-
-.card-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    background-image: var(--cardFrontColor);
-
-    border-radius: 50px;
-
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    transition: all var(--cardHoverEffectTime);
-
-    backdrop-filter: blur(20px);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-   /* box-shadow: 0 0 80px rgba(0, 0, 0, 0.3); */
-
-}
-
-.card-inner:hover {
-    scale: 1.05;
-}
-
-.card-front {
-    margin-top: 10%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-family: "Orbitron", sans-serif;
-    align-items: center;
-    justify-content: space-around;
-    overflow: hidden;
-}
-
-.card-front img {
-    width: 80%;
-}
-
-.card-front:hover {
-    scale: 1.04;
-}
-
-.card-back {
-    width: 100%;
-    height: 12%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    border-top-left-radius: 150%;
-    border-top-right-radius: 150%;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    font-family: "Orbitron", sans-serif;
-    text-align: center;
-    overflow-y: hidden;
-    transition: all var(--cardHoverEffectTime) ease;
-}
-
-.card-back img {
-    width: 50px;
-    margin-top: 5px;
-}
-
-.card-inner:hover .card-back {
-    height: 60%;
-    overflow-y: visible;
-}
-
-.card-inner:hover .card-back img {
-    display: none;
-}
-
-.card-info {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 1%;
-}
-
-svg {
-    margin-top: 5px;
-    fill: white;
-    width: 8.5%;
-}
-
-
-/* Each Row of Sponsors */
-.sponsor-row {
-    display: flex;
-    justify-content: center;
-    column-gap: 10vw;
-    flex-wrap: wrap;
-    margin-bottom: 15vh;
-}
-
-
-/* Initial Background */
-#gradient-canvas {
-    position: fixed;
-    min-height: 100vh;
-    z-index: -5;
-    --gradient-color-1: #0b0144;
-    --gradient-color-2: #010363;
-    --gradient-color-3: #350242;
-    --gradient-color-4: #000000;
-}
-
-
-/* Glowing Text */
-.event-name {
-    user-select: none;
-    cursor: none;
-    color: white;
-    text-align: center;
-    align-items: center;
-    /* justify-content: center;
-font-family: "Do Hyeon", sans-serif; */
-    font-family: 'Azonix', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 75px;
-    font-size: var(--headerSize);
-    /* top: 50%; */
-    position: static;
-    text-shadow: 0px 0px 10px cyan,
-        0px 0px 40px cyan,
-        0px 0px 80px rgb(63, 1, 99),
-        0px 0px 120px cyan,
-        0px 0px 200px cyan;
-    font-size: 3vw;
-}
-
-
-/* Media queries for responsiveness */
-@media screen and (max-width: 1200px) {
-
-    #main-logo {
-        margin-top: 40px;
-        height: 20vh;
-    }
-
-    .card {
-        height: 450px;
-        width: 300px;
-        margin-bottom: 10vh;
-    }
-
-    .event-name {
-        font-size: 40px;
-    }
-}
-
-.scroll-up a {
-    text-decoration: none;
-    color: white;
-}
-
-.scroll-up {
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all var(--cardHoverEffectTime);
-    margin: 15px;
-}
-
-#vanta-canvas{
-    width: 100%;
-    min-height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-
-body {
-  font-family: "Oswald", sans-serif;
+  color: white;
+  background-color: black;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 0;
   color: white;
   overflow-x: hidden;
 }
+
+img {
+  width: 90%;
+  transition: all var(--fadeInDelay);
+  background-color: transparent;
+}
+
+/* Styles for Sponsors Card */
+.circle-1 {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  background: #4776e6;
+  background: -webkit-linear-gradient(to right, #8e54e9, #4776e6);
+  background: linear-gradient(to right, #8e54e9, #4776e6);
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+.circle-2 {
+  position: absolute;
+  bottom: 5%;
+  right: 35%;
+  background: #d7119f;
+  background: -webkit-linear-gradient(to right, #8a0c36, #cb249c);
+  background: linear-gradient(to right, #8a0c36, #c81796);
+  height: 300px;
+  width: 300px; 
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.circle-3 {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  background-color: #a82a71;
+  background: #ca4c0d;
+  background: -webkit-linear-gradient(to right, #7e0305, #b81f0e);
+  background: linear-gradient(to right, #6d080a, #d81c0a);
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.card {
+  height: var(--cardHeight);
+  width: var(--cardWidth);
+  position: relative;
+}
+
+.circles {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--cardFrontColor);
+
+  border-radius: 50px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transition: all var(--cardHoverEffectTime);
+
+  backdrop-filter: blur(72px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.card-inner:hover {
+  scale: 1.05;
+}
+
+.card-front {
+  margin-top: 10%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.card-front img {
+  width: 80%;
+}
+
+.card-front:hover {
+  scale: 1.04;
+}
+
+.card-back {
+  width: 100%;
+  height: 10%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-top-left-radius: 150%;
+  border-top-right-radius: 150%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  overflow-y: hidden;
+  transition: all var(--cardHoverEffectTime) ease;
+}
+
+.card-inner:hover .card-back {
+  height: 60%;
+  overflow-y: visible;
+}
+
+.card-inner:hover .card-back .scroll-up {
+  transform: rotate(180deg);
+}
+
+.card-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Each Row of Sponsors */
+.sponsor-row {
+  display: flex;
+  justify-content: center;
+  column-gap: 10vw;
+  flex-wrap: wrap;
+  margin-bottom: 15vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Initial Background */
+#gradient-canvas {
+  position: fixed;
+  min-height: 100vh;
+  z-index: -5;
+  --gradient-color-1: #0b0144;
+  --gradient-color-2: #010363;
+  --gradient-color-3: #350242;
+  --gradient-color-4: #000000;
+}
+
+/* Glowing Text */
+.event-name {
+  user-select: none;
+  cursor: none;
+  color: white;
+  text-align: center;
+  align-items: center;
+  /* justify-content: center;
+font-family: "Do Hyeon", sans-serif; */
+  font-family: "Azonix", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 75px;
+  font-size: var(--headerSize);
+  /* top: 50%; */
+  position: static;
+  text-shadow: 0px 0px 10px cyan, 0px 0px 40px cyan,
+      0px 0px 80px rgb(63, 1, 99), 0px 0px 120px cyan, 0px 0px 200px cyan;
+  font-size: 3vw;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  #main-logo {
+      margin-top: 40px;
+      height: 15vh;
+  }
+
+  .card {
+      height: 450px;
+      width: 300px;
+      margin-bottom: 10vh;
+  }
+
+  .event-name {
+      font-size: 40px;
+  }
+}
+
+
+.scroll-up {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all var(--cardHoverEffectTime);
+  margin-bottom: 15px;
+}
+
+#vanta-canvas {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 body.no-scroll {
   overflow: hidden;
@@ -265,14 +266,14 @@ body.no-scroll {
   display: none;
 }
 
-.navbar-icon{
+.navbar-icon {
   height: 3rem;
   width: 3rem;
   z-index: 999;
   display: inline-block;
 }
 
-.msLink{
+.msLink {
   position: absolute;
   top: 3vh;
   left: 5vw;
@@ -440,8 +441,28 @@ body.no-scroll {
 
 @media screen and (max-width: 680px) {
   .nav-elements {
-    display: flex !important;
+      display: flex !important;
   }
 }
 
 /* Navbar styles end here */
+
+.sponsor-name {
+  font-family: "Montserrat";
+  font-size: 20px;
+}
+
+.sponsor-title {
+  width:80%;
+  font-family: 'Azonix', sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+  user-select: none;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5);
+  animation: glow 2s ease-in-out infinite alternate;
+  text-align: center;
+  margin-bottom: 10px;
+}
