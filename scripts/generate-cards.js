@@ -6,7 +6,7 @@ const krafton = [
     link: "https://krafton.com/en/"
   },
   {
-    title: "Pixelverse",
+    title: "Pixelverse Sponsor",
     sponsorImageSrc: "../sponsor-images/krafton.png",
     name: "Krafton",
     link: "https://krafton.com/en/"
@@ -20,7 +20,7 @@ const autodesk = [{
       link: "https://www.autodesk.com/"
   },
   {
-      title: "Fusion ID",
+      title: "Fusion ID Sponsor",
       sponsorImageSrc: "../sponsor-images/autodesk.png",
       name: "Autodesk",
       link: "https://www.autodesk.com/"
@@ -36,7 +36,7 @@ const tietoevry = {
 };
 
 const wpm = {
-  title: "Struktura",
+  title: "Struktura Sponsor",
   sponsorImageSrc: "../sponsor-images/wpm.png",
   name: "Walter P Moore",
   link: "https://www.walterpmoore.com/"
@@ -49,7 +49,7 @@ const bhide = [{
       link: "#"
   },
   {
-      title: "Robotica",
+      title: "Robotica Sponsor",
       sponsorImageSrc: "../sponsor-images/bhide.png",
       name: "Bhide & Bhadane Realties",
       link: "#"
@@ -74,9 +74,6 @@ function createSponsorCard(sponsor) {
           </div>
           <h2 class = "sponsor-title">${sponsor.title}</h2>
           <div class="card-back">
-            <div class = 'scroll-up'>
-              <i class="fa fa-solid fa-chevron-up"></i>
-            </div>
             
             <div class = 'card-info'> 
               <h3 class = "sponsor-name">${sponsor.name}</h3>

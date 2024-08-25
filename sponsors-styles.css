@@ -6,12 +6,12 @@
 :root {
   --cardWidth: 300px;
   --cardHeight: 456px;
-  --cardFrontColor: rgba(36, 30, 30, 0.1);
+  --cardFrontColor: rgba(147, 147, 147, 0.15);
   --cardHoverEffectTime: 0.5s;
   --headerColor: rgb(65, 255, 255);
   --headerSize: 8vh;
   --fadeInDelay: 1.5s;
-  --scrollUpDelay: 0.3s;
+  --scrollUpDelay: 0.5s;
 }
 
 * {
@@ -50,20 +50,20 @@ body {
   position: absolute;
   top: 5%;
   left: 20%;
-  background: #4776e6;
-  background: -webkit-linear-gradient(to right, #8e54e9, #4776e6);
-  background: linear-gradient(to right, #8e54e9, #4776e6);
+  background: #5984e9;
+  background: -webkit-linear-gradient(to right, #9661eb, #5984e9);
+  background: linear-gradient(to right, #9661eb, #5984e9);
   height: 250px;
   width: 250px;
   border-radius: 50%;
 }
 .circle-2 {
   position: absolute;
-  bottom: 5%;
-  right: 35%;
-  background: #d7119f;
-  background: -webkit-linear-gradient(to right, #8a0c36, #cb249c);
-  background: linear-gradient(to right, #8a0c36, #c81796);
+  bottom: 15%;
+  right: 20%;
+  background: #236302;
+  background: -webkit-linear-gradient(to right, #02b148, #03217c);
+  background: linear-gradient(to right, #02b148, #03217c);
   height: 300px;
   width: 300px;
   border-radius: 50%;
@@ -73,10 +73,9 @@ body {
   position: absolute;
   top: 50%;
   right: 5%;
-  background-color: #a82a71;
-  background: #ca4c0d;
-  background: -webkit-linear-gradient(to right, #7e0305, #b81f0e);
-  background: linear-gradient(to right, #6d080a, #d81c0a);
+  background-color: #67310a;
+  background: -webkit-linear-gradient(to right, #43037e, #005c94);
+  background: linear-gradient(to right, #43037e, #005c94);
   height: 150px;
   width: 150px;
   border-radius: 50%;
@@ -109,10 +108,11 @@ body {
   overflow: hidden;
   transition: all var(--cardHoverEffectTime);
 
-  backdrop-filter: blur(72px);
+  backdrop-filter: blur(60px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
   position: relative;
+  overflow: hidden;
 }
 
 .card-inner:hover {
@@ -150,8 +150,12 @@ body {
 }
 
 .card-back {
+  opacity: 0;
   width: 100%;
-  height: 10%;
+  height: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* background: rgba(0, 0, 0, 0.8); */
   padding: 10px;
   border-top-left-radius: 150%;
@@ -160,16 +164,14 @@ body {
   border-bottom-right-radius: 50px;
   font-family: "Nunito", sans-serif;
   text-align: center;
-  overflow-y: hidden;
+  overflow: hidden;
   transition: all var(--scrollUpDelay) ease;
 }
 
-.card-back.creep-up .scroll-up {
-  transform: rotate(180deg);
-}
 
 .creep-up {
   height: 60%;
+  opacity: 1;;
   overflow-y: visible;
 }
 
@@ -226,15 +228,6 @@ body {
   .event-name {
     font-size: 40px;
   }
-}
-
-.scroll-up {
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all var(--cardHoverEffectTime);
-  margin-bottom: 15px;
 }
 
 #vanta-canvas {
