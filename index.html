@@ -92,15 +92,22 @@
     
     <div class="sponsor-row">
       <script>
-        createSponsorCard(autodesk);
-        
-        createSponsorCard(wpm);
+        createSponsorCard(tietoevry);
       </script>
     </div>
     
     <div class="sponsor-row">
       <script>
-        createSponsorCard(tietoevry);
+          createSponsorCard(autodesk[0]);
+          createSponsorCard(bhide[0]);
+      </script>
+    </div>
+
+    <div class="sponsor-row">
+      <script>
+          createSponsorCard(wpm);
+          createSponsorCard(bhide[1]);
+          createSponsorCard(autodesk[1]);
       </script>
     </div>
 
@@ -138,16 +145,41 @@ function updateAnimation(timestamp) {
 
   </script>
   <script>
-    // Select all the cards
-    const cards = document.querySelectorAll('.card-back');
+    // // Select all the cards
+    // const cards = document.querySelectorAll('.card-back');
 
-    // Add click event listener to each card
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            card.classList.toggle('creep-up');
+    // // Add click event listener to each card
+    // cards.forEach(card => {
+    //     card.addEventListener('click', () => {
+    //         card.classList.toggle('creep-up');
 
-        });
+    //     });
+    // });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // observer object to govern fade in
+const observer = new IntersectionObserver((entries) =>{
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+          entry.target.classList.add('creep-up');
+        }
+        else{
+          entry.target.classList.remove('creep-up');
+        }
+
     });
+});
+
+
+// control events showing
+const hiddenElements = document.querySelectorAll('.card-back');
+console.log(hiddenElements);
+hiddenElements.forEach((e1) => observer.observe(e1));
+
+})
+
   </script>
   </body>
 </html>

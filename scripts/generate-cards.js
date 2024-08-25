@@ -1,16 +1,25 @@
 const krafton = {
     title: "Title Sponsor",
-    sponsorImageSrc: "../sponsor-images/krafton.jpeg",
+    sponsorImageSrc: "../sponsor-images/krafton.png",
     name: "Krafton",
     link: "https://krafton.com/en/"
 };
 
-const autodesk = {
+const autodesk = [
+  {
     title: "Associate Sponsor",
-    sponsorImageSrc: "../sponsor-images/autodesk.jpeg",
+    sponsorImageSrc: "../sponsor-images/autodesk.png",
+    name: "Autodesk",
+    link: "https://www.autodesk.com/" 
+  },
+  {
+    title: "Fusion ID",
+    sponsorImageSrc: "../sponsor-images/autodesk.png",
     name: "Autodesk",
     link: "https://www.autodesk.com/"
-};
+  }
+];
+
 
 const tietoevry = {
     title: "Chief Sponsor",
@@ -25,6 +34,21 @@ const wpm = {
     name: "Walter P Moore",
     link: "https://www.walterpmoore.com/"
 };
+
+const bhide = [
+  {
+    title: "Associate Sponsor",
+    sponsorImageSrc: "../sponsor-images/bhide.png",
+    name: "Bhide & Bhadane Realties",
+    link: "#"
+  },
+  {
+    title: "Robotica",
+    sponsorImageSrc: "../sponsor-images/bhide.png",
+    name: "Bhide & Bhadane Realties",
+    link: "#"
+  }
+];
 
 function createSponsorCard(sponsor) {
     document.write(`
@@ -50,7 +74,6 @@ function createSponsorCard(sponsor) {
               
               <div class = 'card-info'> 
                 <h3 class = "sponsor-name">${sponsor.name}</h3>
-                <p class="description">${sponsor.description}</p>
               </div> 
             </div>
           </div> 
