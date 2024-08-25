@@ -1,9 +1,17 @@
-const krafton = {
-  title: "Title Sponsor",
-  sponsorImageSrc: "../sponsor-images/krafton.png",
-  name: "Krafton",
-  link: "https://krafton.com/en/"
-};
+const krafton = [
+  {
+    title: "Title Sponsor",
+    sponsorImageSrc: "../sponsor-images/krafton.png",
+    name: "Krafton",
+    link: "https://krafton.com/en/"
+  },
+  {
+    title: "Pixelverse",
+    sponsorImageSrc: "../sponsor-images/krafton.png",
+    name: "Krafton",
+    link: "https://krafton.com/en/"
+  }
+];
 
 const autodesk = [{
       title: "Associate Sponsor",
@@ -28,7 +36,7 @@ const tietoevry = {
 };
 
 const wpm = {
-  title: "Associate Sponsor",
+  title: "Struktura",
   sponsorImageSrc: "../sponsor-images/wpm.png",
   name: "Walter P Moore",
   link: "https://www.walterpmoore.com/"
