@@ -11,7 +11,7 @@
   --headerColor: rgb(65, 255, 255);
   --headerSize: 8vh;
   --fadeInDelay: 1.5s;
-  --scrollUpDelay : 0.3s;
+  --scrollUpDelay: 0.3s;
 }
 
 * {
@@ -65,7 +65,7 @@ body {
   background: -webkit-linear-gradient(to right, #8a0c36, #cb249c);
   background: linear-gradient(to right, #8a0c36, #c81796);
   height: 300px;
-  width: 300px; 
+  width: 300px;
   border-radius: 50%;
   opacity: 0.8;
 }
@@ -164,7 +164,7 @@ body {
   transition: all var(--scrollUpDelay) ease;
 }
 
-.card-back.creep-up .scroll-up{
+.card-back.creep-up .scroll-up {
   transform: rotate(180deg);
 }
 
@@ -192,17 +192,6 @@ body {
   position: relative;
 }
 
-/* Initial Background */
-#gradient-canvas {
-  position: fixed;
-  min-height: 100vh;
-  z-index: -5;
-  --gradient-color-1: #0b0144;
-  --gradient-color-2: #010363;
-  --gradient-color-3: #350242;
-  --gradient-color-4: #000000;
-}
-
 /* Glowing Text */
 .event-name {
   user-select: none;
@@ -210,38 +199,34 @@ body {
   color: white;
   text-align: center;
   align-items: center;
-  /* justify-content: center;
-font-family: "Do Hyeon", sans-serif; */
   font-family: "Azonix", sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-bottom: 75px;
   font-size: var(--headerSize);
-  /* top: 50%; */
   position: static;
-  text-shadow: 0px 0px 10px cyan, 0px 0px 40px cyan,
-      0px 0px 80px rgb(63, 1, 99), 0px 0px 120px cyan, 0px 0px 200px cyan;
+  text-shadow: 0px 0px 10px cyan, 0px 0px 40px cyan, 0px 0px 80px rgb(63, 1, 99),
+    0px 0px 120px cyan, 0px 0px 200px cyan;
   font-size: 3vw;
 }
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 1200px) {
   #main-logo {
-      margin-top: 40px;
-      height: 15vh;
+    margin-top: 40px;
+    height: 15vh;
   }
 
   .card {
-      height: 450px;
-      width: 300px;
-      margin-bottom: 10vh;
+    height: 450px;
+    width: 300px;
+    margin-bottom: 10vh;
   }
 
   .event-name {
-      font-size: 40px;
+    font-size: 40px;
   }
 }
-
 
 .scroll-up {
   font-size: 2rem;
@@ -448,7 +433,7 @@ body.no-scroll {
 
 @media screen and (max-width: 680px) {
   .nav-elements {
-      display: flex !important;
+    display: flex !important;
   }
 }
 
@@ -460,15 +445,16 @@ body.no-scroll {
 }
 
 .sponsor-title {
-  width:80%;
-  font-family: 'Azonix', sans-serif;
+  width: 80%;
+  font-family: "Azonix", sans-serif;
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.125em;
   text-transform: uppercase;
   user-select: none;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5);
   animation: glow 2s ease-in-out infinite alternate;
   text-align: center;
   margin-bottom: 10px;
