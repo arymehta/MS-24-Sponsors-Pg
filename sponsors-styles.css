@@ -131,11 +131,20 @@ body {
   overflow: hidden;
 }
 
-.card-front img {
+.card-front a img {
   width: 80%;
-  transition: all var(--cardHoverEffectTime); ;
+  transition: all var(--cardHoverEffectTime);
 }
 
+.card-front a img:hover {
+  scale: 1.04;
+}
+
+.card-front a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .card-front:hover {
   scale: 1.04;
 }
