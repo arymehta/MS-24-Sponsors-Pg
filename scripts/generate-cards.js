@@ -56,6 +56,13 @@ const bhide = [{
   }
 ];
 
+const AA = {
+  title: "Educational Partner",
+  sponsorImageSrc: "../sponsor-images/AA.png",
+  name: "Acharya Academy",
+  link: "https://acharyaacademy.in/"
+};
+
 function createSponsorCard(sponsor) {
   document.write(`
      <div class="card">
