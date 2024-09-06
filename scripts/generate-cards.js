@@ -27,12 +27,18 @@ const autodesk = [{
   }
 ];
 
-
 const tietoevry = {
   title: "Chief Sponsor",
   sponsorImageSrc: "../sponsor-images/TE.png",
   name: "Tietoevry",
   link: "https://www.tietoevry.com/en/"
+};
+
+const wipro = {
+  title: "Chief Sponsor",
+  sponsorImageSrc: "../sponsor-images/wipro.png",
+  name: "Wipro PARI",
+  link: "https://www.wipropari.com/"
 };
 
 const wpm = {
